@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js" defer></script>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Weather App</h1>
+    </div>
+    <div id="cover">
+        <form id="form" method="get" action="">
+            <div class="tb">
+              <div class="td"><input id="search-input" type="text" placeholder="City or Zipcode" required></div>
+              <div class="td" id="s-cover">
+                <button type="submit">
+                  <div id="s-circle"></div>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+        </form>
+    </div>
+    <div class="weather-container">
+        <h2 class="city">Rocklin</h2>
+        <p class="country">United States of America</p>
+        <div class="condition-div">
+            <p class="condition-text">Sunny</p>
+            <img class="condition-img" src="//cdn.weatherapi.com/weather/64x64/day/113.png">
+        </div>
+        <p class="temp">64 &degF</p>
+        <p class="feels-like">Feels Like 62 &degF</p>
+        <p class="wind">Wind: 4 mph, Direction: NW</p>
+    </div>
+    <img src="" class="background-img">
+</body>
+</html>
