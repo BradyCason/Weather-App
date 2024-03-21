@@ -9,11 +9,11 @@ body{
     flex-direction: column;
     align-items: center;
     height: 100%;
-    background-color: black;
+    background-color: #2081db;
 }
 
 .top-bar{
-    background-color: lightblue;
+    background-color: #F6995C;
     height: 10vh; 
     width: 100vw;
     display: flex;
@@ -22,21 +22,23 @@ body{
 }
 
 .weather-container{
-    background-color: grey;
+    background-color: #F6995C;
     visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 500px;
     height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #F6995C, 0 0 0 10px #ffffffeb;
 }
   
 html,
 body {
     height: 100%;
     min-height: 100%;
+    color: #ffffffeb;
 }
   
 .tb {
@@ -60,11 +62,12 @@ button {
 }
   
 #cover {
+    margin-top: 30px;;
     width: 550px;
     padding: 35px;
-    background-color: #ff7575;
+    background-color: #F6995C;
     border-radius: 20px;
-    box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+    box-shadow: 0 10px 40px #F6995C, 0 0 0 20px #ffffffeb;
     transform: scale(0.6);
 }
   
@@ -80,7 +83,7 @@ input[type="text"] {
 }
   
 input[type="text"]::placeholder {
-    color: #e16868;
+    color: #757575;
 }
   
 #s-cover {
@@ -181,10 +184,13 @@ p{
 .condition-div{
     display: flex;
     align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -10px;
 }
 
 .temp{
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
 }
 
@@ -193,4 +199,63 @@ p{
     top: 0;
     left: 0;
     width: 100vw;
+}
+
+.scroller{
+    width: 300vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.7;
+    
+    z-index: 1;
+    top: 0;
+
+    background: url('./images/clouds2.png') repeat-x;
+    background-size: contain;
+    animation: scrollBackground 200s linear infinite;
+}
+
+@keyframes scrollBackground {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(30%);
+    }
+}
+
+#cover, .top-bar, .weather-container{
+    z-index: 2;
+}
+
+img{
+    height: 100%;
+}
+
+h2{
+    font-size: 50px;;
+}
+
+.country{
+    margin-top: -10px;
+}
+
+.error-message-div{
+    background-color: #F6995C;
+    position: absolute;
+    margin: auto;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #F6995C, 0 0 0 10px #ffffffeb;
+    z-index: 2;
+}
+
+.error-message{
+    text-align: center;
+    margin: 20px;
+    color: #ffffffeb;
 }

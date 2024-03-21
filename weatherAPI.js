@@ -8,6 +8,7 @@ class WeatherAPI{
             let response = await fetch("https://api.weatherapi.com/v1/current.json?key=" + this.apiKey + "&q=" + city, {mode: 'cors'});
             let data = await response.json();
             if(response.ok){
+                console.log(data)
                 return (data);
             }
         }catch (error){
